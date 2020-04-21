@@ -17,20 +17,20 @@ steps:
       - go get github.com/360EntSecGroup-Skylar/goreporter
       - goreporter -p ./ -f html -r /var/reports/
 
-#  - name: build
-#    image: golang
-#    commands:
-#      - go get
-#      - go build -o output
-#      - chmod +x output
-#
-#  - name: run
-#    image: golang
-#    commands:
-#      - go get
-#      - go build -o output
-#      - chmod +x output
-#      - ./output
+ - name: build
+   image: golang
+   commands:
+     - go get
+     - go build -o output
+     - chmod +x output
+
+ - name: run
+   image: golang
+   commands:
+     - go get
+     - go build -o output
+     - chmod +x output
+     - ./output
 
 volumes:
   - name: reports
